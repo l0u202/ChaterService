@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="acceuil.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const openModalButtons = document.querySelectorAll(
+          "[data-modal-target]"
+        );
+        const closeModalButtons = document.querySelectorAll(
+          "[data-close-button]"
+        );
+        const overlay = document.getElementById("overlay");
+
+        openModalButtons.forEach((link) => {
+          link.addEventListener("click", () => {
+            const modal = document.querySelector(link.dataset.modalTarget);
+            openModal(modal);
+          });
+        });
+
+        closeModalButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const modal = button.closest(".modal");
+            closeModal(modal);
+          });
+        });
+
+        function openModal(modal) {
+          if (modal == null) return;
+          modal.classList.add("active");
+          overlay.classList.add("active");
+        }
+
+        function closeModal(modal) {
+          if (modal == null) return;
+          modal.classList.remove("active");
+          overlay.classList.remove("active");
+        }
+      }); 
+      var clicks = 0;
+      function Plus() {
+        if(clicks<10){
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;}
+      };
+
+      function Minus() {
+        if(clicks>0){
+        clicks --;
+        document.getElementById("clicks").innerHTML = clicks;}}
+        
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a class="aa" href="acceuil.html"><img id="logo" src="chatel.png" /></a>
+        <a class="aa" href="#news">News</a>
+        <a class="aa" href="#contact">Contact</a>
+      </div>
+      <div>
+        <a class="aa" href="###"><img src="i.png" width="15px"> 71 456 854</a>
+      </div>
+    </div>
+
+    <div class="main">
+      <div id="atf">
+        <h1 id="tt">Bienvenue sur ChaterService.com</h1>
+      </div>
+      <br /><br />
+      <div id="flex00">
+        <a href="###" data-modal-target="#modal">
+          <div class="hot">
+            <div class="flex01">
+              <div class="perf">
+                <h1 class="hotel">Hôtel Arij</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="prix"><h1>50DT</h1></div>
+            </div>
+            <div>
+              <img class="mim01" width="400px" height="250px" src="arij.jpg" />
+            </div>
+          </div>
+        </a>
+        <a href="###" data-modal-target="#modal1">
+          <div class="hot">
+            <div class="flex01">
+              <div>
+                <h1 class="hotel">Hôtel Excelsior</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="prix"><h1>50DT</h1></div>
+            </div>
+            <div>
+              <img class="mim01" width="400px" height="250px" src="excelsior.jpg" />
+            </div>
+          </div>
+        </a>
+        <a href="###" data-modal-target="#modal2">
+          <div class="hot">
+            <div class="flex01">
+              <div>
+                <h1 class="hotel">Hôtel du Sud</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="prix"><h1>50DT</h1></div>
+            </div>
+            <div>
+              <img class="mim01" width="400px" height="250px" src="hotsud.jpg" />
+            </div>
+          </div>
+        </a>
+      </div>
+      <br /><br /><br />
+      <div id="flex00">
+        <a href="###" data-modal-target="#modal3">
+          <div class="hot">
+            <div class="flex01">
+              <div>
+                <h1 class="hotel">Hôtel Asma</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="prix"><h1>50DT</h1></div>
+            </div>
+            <div>
+              <img class="mim01" width="400px" height="250px" src="asamaa.jpg" />
+            </div>
+          </div>
+        </a>
+        <a href="###" data-modal-target="#modal4">
+          <div class="hot">
+            <div class="flex01">
+              <div>
+                <h1 class="hotel">Apart-Hôtel Chater</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="prix"><h1>50DT</h1></div>
+            </div>
+            <div>
+              <img class="mim01" width="400px" height="250px" src="ahc.jpg" />
+            </div>
+          </div>
+        </a>
+        <a href="###" data-modal-target="#modal5">
+          <div class="hot">
+            <div class="flex01">
+              <div>
+                <h1 class="hotel">Convalescence le Mont</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="prix"><h1>50DT</h1></div>
+            </div>
+            <div>
+              <img class="mim01" width="400px" height="250px" src="mont.jpg" />
+            </div>
+          </div>
+        </a>
+      </div>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+      <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+
+      <div class="modal" id="modal">
+        <div class="mh">
+          <div class="ttl"><h1>Hôtel Arij</h1></div>
+          <button data-close-button class="x">&times;</button>
+        </div>
+        <div class="mheader">
+          <div>
+            <div class="place">
+              <img src="pin.png" width="20px" height="20px">
+              <h3>place..................</h3>
+            </div>
+            <h2>Photos Hôtel Arij</h2>
+          </div>
+          <img src="arij.png" width="10%" height="10%" />
+        </div>
+        <div class="mheader1">
+          <div id="slider">
+            <figure class="mim">
+              <img src="arij.jpg">
+              <img src="excelsior.jpg">
+              <img src="ahc.jpg">
+              <img src="asamaa.jpg">
+              <img src="hotsud.jpg">
+            </figure>
+          </div>
+          <div>
+            <form id="ff">
+              <div class="form-group">
+                  <label class="perf">Chambre 1</label>
+              </div>
+              <div class="form-group">
+                  <label class="perf">Nom et Prénom</label>
+                  <input type="text">
+              </div>
+              <div class="form-group">
+                <label class="perf">Numéro de Téléphone</label>
+                <input type="number">
+            </div>
+              <div class="form-group">
+                <label class="perf">E-mail</label>
+                <input type="email">
+              </div>
+              <div class="form-group">
+                  <label class="perf">Personne(s)</label>
+                  <div id="butt" class="per">
+                      <button onclick="Minus()" id="minus">
+                          <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <line y1="1" x2="16" y2="1" stroke="#000000" stroke-width="2" class="icon" />
+                          </svg>
+                      </button>
+                      <a id="clicks" class="perf"> 0 </a>
+                      <button onclick="Plus()" id="plus">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                              <line x1="8" y1="0" x2="8" y2="16" stroke="#0064FE" stroke-width="2" />
+                              <line y1="8" x2="16" y2="8" stroke="#000000" stroke-width="2" />
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="perf">Arrivée</label>
+                  <input class="perf" type="date" id="arrival">
+              </div>
+              <div class="form-group">
+                  <label class="perf">Départ</label>
+                  <input class="perf" type="date" id="departure">
+              </div>
+              <button id="conf">Confirmer</button>
+          </form>
+          </div>
+        </div>
+        <div class="para">
+          <h1>Présentation</h1>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        </div>
+        <div class="para">
+          <h1>Présentation</h1>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        </div>
+      </div>
+      <div id="overlay"></div>
+    </div>
+    <div class="modal" id="modal1">
+      <div class="mh">
+        <div class="ttl"><h1>Hôtel Excelsior</h1></div>
+        <button data-close-button class="x">&times;</button>
+      </div>
+      <div class="mheader">
+        <div>
+          <div class="place">
+            <img src="pin.png" width="20px" height="20px">
+            <h3>place..................</h3>
+          </div>
+          <h2>Photos Hôtel Excelsior</h2>
+        </div>
+        <img src="EXCEL.png" width="10%" height="10%" />
+      </div>
+      <div class="mheader1">
+        <div id="slider">
+          <figure class="mim">
+            <img src="excelsior.jpg">
+            <img src="hotsud.jpg">
+            <img src="ahc.jpg">
+            <img src="asamaa.jpg">
+            <img src="excelsior.jpg">
+          </figure>
+        </div>
+        <div>
+          <form id="ff">
+            <div class="form-group">
+                <label class="perf">Chambre 1</label>
+            </div>
+            <div class="form-group">
+                <label class="perf">Nom et Prénom</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+              <label class="perf">Numéro de Téléphone</label>
+              <input type="number">
+          </div>
+            <div class="form-group">
+              <label class="perf">E-mail</label>
+              <input type="email">
+            </div>
+            <div class="form-group">
+                <label class="perf">Personne(s)</label>
+                <div id="butt" class="per">
+                    <button onclick="Minus()" id="minus">
+                        <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="1" x2="16" y2="1" stroke="#000000" stroke-width="2" class="icon" />
+                        </svg>
+                    </button>
+                    <a id="clicks" class="perf"> 0 </a>
+                    <button onclick="Plus()" id="plus">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <line x1="8" y1="0" x2="8" y2="16" stroke="#0064FE" stroke-width="2" />
+                            <line y1="8" x2="16" y2="8" stroke="#000000" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="perf">Arrivée</label>
+                <input class="perf" type="date" id="arrival">
+            </div>
+            <div class="form-group">
+                <label class="perf">Départ</label>
+                <input class="perf" type="date" id="departure">
+            </div>
+            <button id="conf">Confirmer</button>
+        </form>
+        </div>
+      </div>
+      <div class="para">
+        <h1>Présentation</h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+      </div>
+      <div class="para">
+        <h1>Présentation</h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </div>
+    <div class="modal" id="modal2">
+        <div class="mh">
+          <div class="ttl"><h1>Hôtel du Sud</h1></div>
+          <button data-close-button class="x">&times;</button>
+        </div>
+        <div class="mheader">
+          <div>
+            <div class="place">
+              <img src="pin.png" width="20px" height="20px">
+              <h3>place..................</h3>
+            </div>
+            <h2>Photos Hôtel du Sud</h2>
+          </div>
+          <img src="sud.png" width="10%" height="10%" />
+        </div>
+        <div class="mheader1">
+          <div id="slider">
+            <figure class="mim">
+              <img src="hotsud.jpg">
+              <img src="asamaa.jpg">
+              <img src="ahc.jpg">
+              <img src="arij.jpg">
+              <img src="hotsud.jpg">
+            </figure>
+          </div>
+          <div>
+            <form id="ff">
+              <div class="form-group">
+                  <label class="perf">Chambre 1</label>
+              </div>
+              <div class="form-group">
+                  <label class="perf">Nom et Prénom</label>
+                  <input type="text">
+              </div>
+              <div class="form-group">
+                <label class="perf">Numéro de Téléphone</label>
+                <input type="number">
+            </div>
+              <div class="form-group">
+                <label class="perf">E-mail</label>
+                <input type="email">
+              </div>
+              <div class="form-group">
+                  <label class="perf">Personne(s)</label>
+                  <div id="butt" class="per">
+                      <button onclick="Minus()" id="minus">
+                          <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <line y1="1" x2="16" y2="1" stroke="#000000" stroke-width="2" class="icon" />
+                          </svg>
+                      </button>
+                      <a id="clicks" class="perf"> 0 </a>
+                      <button onclick="Plus()" id="plus">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                              <line x1="8" y1="0" x2="8" y2="16" stroke="#0064FE" stroke-width="2" />
+                              <line y1="8" x2="16" y2="8" stroke="#000000" stroke-width="2" />
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="perf">Arrivée</label>
+                  <input class="perf" type="date" id="arrival">
+              </div>
+              <div class="form-group">
+                  <label class="perf">Départ</label>
+                  <input class="perf" type="date" id="departure">
+              </div>
+              <button id="conf">Confirmer</button>
+          </form>
+          </div>
+        </div>
+        <div class="para">
+          <h1>Présentation</h1>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        </div>
+        <div class="para">
+          <h1>Présentation</h1>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+          quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        </div>
+      </div>
+      <div id="overlay"></div>
+    </div>
+    <div class="modal" id="modal3">
+      <div class="mh">
+        <div class="ttl"><h1>Hôtel Asma</h1></div>
+        <button data-close-button class="x">&times;</button>
+      </div>
+      <div class="mheader">
+        <div>
+          <div class="place">
+            <img src="pin.png" width="20px" height="20px">
+            <h3>place..................</h3>
+          </div>
+          <h2>Photos Hôtel Asma</h2>
+        </div>
+        <img src="asma.png" width="10%" height="10%" />
+      </div>
+      <div class="mheader1">
+        <div id="slider">
+          <figure class="mim">
+            <img src="asamaa.jpg">
+            <img src="excelsior.jpg">
+            <img src="ahc.jpg">
+            <img src="hotsud.jpg">
+            <img src="asamaa.jpg">
+          </figure>
+        </div>
+        <div>
+          <form id="ff">
+            <div class="form-group">
+                <label class="perf">Chambre 1</label>
+            </div>
+            <div class="form-group">
+                <label class="perf">Nom et Prénom</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+              <label class="perf">Numéro de Téléphone</label>
+              <input type="number">
+          </div>
+            <div class="form-group">
+              <label class="perf">E-mail</label>
+              <input type="email">
+            </div>
+            <div class="form-group">
+                <label class="perf">Personne(s)</label>
+                <div id="butt" class="per">
+                    <button onclick="Minus()" id="minus">
+                        <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="1" x2="16" y2="1" stroke="#000000" stroke-width="2" class="icon" />
+                        </svg>
+                    </button>
+                    <a id="clicks" class="perf"> 0 </a>
+                    <button onclick="Plus()" id="plus">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <line x1="8" y1="0" x2="8" y2="16" stroke="#0064FE" stroke-width="2" />
+                            <line y1="8" x2="16" y2="8" stroke="#000000" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="perf">Arrivée</label>
+                <input class="perf" type="date" id="arrival">
+            </div>
+            <div class="form-group">
+                <label class="perf">Départ</label>
+                <input class="perf" type="date" id="departure">
+            </div>
+            <button id="conf">Confirmer</button>
+        </form>
+        </div>
+      </div>
+      <div class="para">
+        <h1>Présentation</h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+      </div>
+      <div class="para">
+        <h1>Présentation</h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+        quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </div>
+  <div class="modal" id="modal4">
+    <div class="mh">
+      <div class="ttl"><h1>Apart-Hôtel Chater</h1></div>
+      <button data-close-button class="x">&times;</button>
+    </div>
+    <div class="mheader">
+      <div>
+        <div class="place">
+          <img src="pin.png" width="20px" height="20px">
+          <h3>place..................</h3>
+        </div>
+        <h2>Photos Apart-Hôtel Chater</h2>
+      </div>
+      <img src="chater hotel.png" width="10%" height="10%" />
+    </div>
+    <div class="mheader1">
+      <div id="slider">
+        <figure class="mim">
+          <img src="ahc.jpg">
+          <img src="excelsior.jpg">
+          <img src="arij.jpg">
+          <img src="asamaa.jpg">
+          <img src="ahc.jpg">
+        </figure>
+      </div>
+      <div>
+        <form id="ff">
+          <div class="form-group">
+              <label class="perf">Chambre 1</label>
+          </div>
+          <div class="form-group">
+              <label class="perf">Nom et Prénom</label>
+              <input type="text">
+          </div>
+          <div class="form-group">
+            <label class="perf">Numéro de Téléphone</label>
+            <input type="number">
+        </div>
+          <div class="form-group">
+            <label class="perf">E-mail</label>
+            <input type="email">
+          </div>
+          <div class="form-group">
+              <label class="perf">Personne(s)</label>
+              <div id="butt" class="per">
+                  <button onclick="Minus()" id="minus">
+                      <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <line y1="1" x2="16" y2="1" stroke="#000000" stroke-width="2" class="icon" />
+                      </svg>
+                  </button>
+                  <a id="clicks" class="perf"> 0 </a>
+                  <button onclick="Plus()" id="plus">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                          <line x1="8" y1="0" x2="8" y2="16" stroke="#0064FE" stroke-width="2" />
+                          <line y1="8" x2="16" y2="8" stroke="#000000" stroke-width="2" />
+                      </svg>
+                  </button>
+              </div>
+          </div>
+          <div class="form-group">
+              <label class="perf">Arrivée</label>
+              <input class="perf" type="date" id="arrival">
+          </div>
+          <div class="form-group">
+              <label class="perf">Départ</label>
+              <input class="perf" type="date" id="departure">
+          </div>
+          <button id="conf">Confirmer</button>
+      </form>
+      </div>
+    </div>
+    <div class="para">
+      <h1>Présentation</h1>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+      quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+      quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+    </div>
+    <div class="para">
+      <h1>Présentation</h1>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+      quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+      quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+    </div>
+  </div>
+  <div id="overlay"></div>
+</div>
+<div class="modal" id="modal5">
+  <div class="mh">
+    <div class="ttl"><h1>Convalescence le Mont</h1></div>
+    <button data-close-button class="x">&times;</button>
+  </div>
+  <div class="mheader">
+    <div>
+      <div class="place">
+        <img src="pin.png" width="20px" height="20px">
+        <h3>place..................</h3>
+      </div>
+      <h2>Photos Convalescence le Mont</h2>
+    </div>
+    <img src="CM.png" width="10%" height="10%" />
+  </div>
+  <div class="mheader1">
+    <div id="slider">
+      <figure class="mim">
+        <img src="mont.jpg">
+        <img src="excelsior.jpg">
+        <img src="ahc.jpg">
+        <img src="asamaa.jpg">
+        <img src="mont.jpg">
+      </figure>
+    </div>
+    <div>
+      <form id="ff">
+        <div class="form-group">
+            <label class="perf">Chambre 1</label>
+        </div>
+        <div class="form-group">
+            <label class="perf">Nom et Prénom</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+          <label class="perf">Numéro de Téléphone</label>
+          <input type="number">
+      </div>
+        <div class="form-group">
+          <label class="perf">E-mail</label>
+          <input type="email">
+        </div>
+        <div class="form-group">
+            <label class="perf">Personne(s)</label>
+            <div id="butt" class="per">
+                <button onclick="Minus()" id="minus">
+                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="16" y2="1" stroke="#000000" stroke-width="2" class="icon" />
+                    </svg>
+                </button>
+                <a id="clicks" class="perf"> 0 </a>
+                <button onclick="Plus()" id="plus">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <line x1="8" y1="0" x2="8" y2="16" stroke="#0064FE" stroke-width="2" />
+                        <line y1="8" x2="16" y2="8" stroke="#000000" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="perf">Arrivée</label>
+            <input class="perf" type="date" id="arrival">
+        </div>
+        <div class="form-group">
+            <label class="perf">Départ</label>
+            <input class="perf" type="date" id="departure">
+        </div>
+        <button id="conf">Confirmer</button>
+    </form>
+    </div>
+  </div>
+  <div class="para">
+    <h1>Présentation</h1>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+    quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+    quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+  </div>
+  <div class="para">
+    <h1>Présentation</h1>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+    quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Unde nulla ducimus quo corporis praesentium accusamus debitis et vel quos, 
+    quae nam fugit hic doloribus magnam magni in excepturi eaque sunt.
+  </div>
+</div>
+<div id="overlay"></div>
+</div>
+    <footer>
+      <div id="flex">
+        <div><img class="ft" src="arij.png" /></div>
+        <div><img class="ft" src="sud.png" /></div>
+        <div><img class="ft" src="asma.png" /></div>
+        <div>
+          <img class="ft" src="chater hotel.png" />
+        </div>
+        <div><img class="ft" src="EXCEL.png" /></div>
+        <div><img class="ft" src="CM.png" /></div>
+        <div><img class="ft" src="dyar chater.png" /></div>
+      </div>
+    </footer>
+  </body>
+</html>
